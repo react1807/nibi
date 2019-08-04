@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.bgbox{
+    background: #33393E;
+    width: 100%;
+    overflow: hidden;
+    height: 124vw;
+    header{
+        width: 100%;
+        height: 370px;
+      
+      .header-li{
+         width: 750px;
+         height:200px;
+         background:#ECECEC; 
+         margin:100px 80px;
+         line-height: 200px;
+         padding-left: 30px;
+        //  border-radius: 25px;
+         span{
+             padding-left: 70px;
+         }
+      }
+        .header-ul{
+         width: 880px;
+         height: 1000px;
+         background:#F0F0F0;
+         position:absolute;
+         top:300px;
+         left:80px;
+         .navlinkclick{
+            background: #98CCE1;
+        }
+         li{
+            
+             a{
+                 display: inline-block;
+                 text-decoration: none;
+                 color: black;
+                 width: 800px;
+                 height: 150px;
+                 padding: 20px;
+                 line-height: 100px;
+             }
+         }
+        }
+        .nav-two-ul{
+            width: 795px;
+            height: 500px;
+            background:#ECECEC;
+            position: absolute;
+            right: 63px;
+            
+            a{
+                display: inline-block;
+                text-decoration: none;
+                color: black;
+                width: 800px;
+                height: 150px;
+                padding: 20px;
+                line-height: 100px;
+            }
+        }
+    }
+    .mains{
+        width: 96%;
+        height: 100%;
+        background:#F0F0F0;
+        margin:35px;
+        overflow: hidden;
+        border-radius: 25px;
+        .inputbox{
+            width: 80%;
+            height: 200px;
+            // background: red;
+            margin:70px auto;
+            input{
+                width: 100%;
+                height: 200px;
+                outline: none;
+                font-size: 100px;
+            }
+        }
+        .tetxarea-box{
+            width: 80%;
+        //    height: 500px; 
+            margin:120px auto;
+            textarea{
+                width: 100%;
+                border: 1px solid gray;
+                color:#9AA6AF; 
+            }           
+        }
+       
+        .btn{
+            width: 600px;
+            height: 250px;
+            background:#6CBA21;
+            color: white;
+            text-align: center;
+            line-height: 250px;
+            font-size: 120px;
+            margin-left:150px;
+            border-radius: 40px;
+        }
+        .imgbox{
+            margin-left: 150px;
+        }
+    }
+}
