@@ -125,7 +125,7 @@ export default class index extends Component {
     }
     zuce=()=>{
        alert('注册成功')
-        console.log(this.props.history.push('/login/den'))
+        this.props.history.push('/login/den')
     }
 
     componentDidMount() {
