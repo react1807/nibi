@@ -4,8 +4,11 @@ import './html.scss'
 import Tankuang from '../tankuang'
 import Login from '../login'
 import Home from '../home/index'
+<<<<<<< HEAD
 import Publish from '../publishpage'
 import LikePage from '../likepages'
+=======
+>>>>>>> 84c2bbdca7b73dc3ca1551c82c2d51436fe55a2f
 import { Switch, Route } from 'react-router-dom'
 export default class index extends Component {
     componentDidMount() {
