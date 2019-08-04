@@ -32,6 +32,7 @@ export default class index extends Component {
     befor = ({ target }) => {
         const { name } = target;
         const value = this.state[name].value
+        console.log(value)
         let isShow
         // 手机号验证
         if (name === 'user') {
