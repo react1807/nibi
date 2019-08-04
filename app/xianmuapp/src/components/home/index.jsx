@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Header from './header'
 import Images from './img'
 import './home.scss'
-
 import { Route, Switch, Redirect } from 'react-router-dom'
 export default class Html extends Component {
     render() {
