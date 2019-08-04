@@ -1,0 +1,31 @@
+.header-box{
+    width: 100%;
+    background: #9999;
+    padding: 20px;
+    // overflow: hidden;
+    box-sizing: border-box;
+    justify-content: space-between;
+    .header-imgbox1{
+        width: 50%;
+
+        img{
+            width: 100%;
+        }
+
+    }
+     .header-form {
+         padding: 10px;
+         background: #9999;
+          .header-hed{
+              position: relative;
+
+              .header-text {
+                   width: 100%;
+                   background: #9999;
+                  position: absolute;
+                    top:33px;
+              }
+          }
+
+     }
+}

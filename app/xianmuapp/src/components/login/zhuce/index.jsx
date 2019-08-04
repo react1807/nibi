@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import {NavLink} from 'react-router-dom'
 export default class index extends Component {
     constructor(props) {
         super(props)
@@ -22,10 +22,10 @@ export default class index extends Component {
             },
             yanzheng: '',
             sendyan:'',
-            zu:false
+            zu:false,
         }
     }
-    random(lower, upper) {
+    random() {
         const random = Math.floor(Math.random() * (1000 - 10000)) + 10000;
         this.setState({
             yanzheng: random
@@ -37,6 +37,8 @@ export default class index extends Component {
         this.setState({
             [name]: this.state[name]
         })
+
+
     }
 
     gaiYan=()=>{
@@ -58,7 +60,7 @@ export default class index extends Component {
         }
         // 图片验证码
         if (name==='imgyan'){
-            if (value !== String(this.state.yanzheng) ) {
+            if (value !== String(this.state.yanzheng || value.length) ) {
                 isShow = true
             } else {
                 isShow = false;
@@ -72,7 +74,6 @@ export default class index extends Component {
                 isShow = false;
             }
         }
-
         if (name === 'pwd') {
             if (value.length<6) {
                 isShow = true
@@ -85,6 +86,26 @@ export default class index extends Component {
         this.setState({
             [name]: this.state[name]
         })
+
+        let keys = []
+        let kep = []
+        for (var key in this.state) {
+            if (typeof (this.state[key]) === 'object') {
+                if (this.state[key].value.length < 4) {
+                    kep = [...kep, true]
+
+                } else {
+                    kep = [...kep, false]
+                }
+
+                keys = [...keys, this.state[key].isshow]
+            }
+        }
+        let isyan = [...keys, ...kep]
+        const ss = isyan.every(item => item == false)
+        this.setState({
+            zu: ss
+        })
     }
 
     btnSend=()=>{
@@ -94,27 +115,17 @@ export default class index extends Component {
             sendyan: sendyan
         })
     }
-    zuce=()=>{
-
-        for (var key in this.state){
-            if (typeof (this.state[key]) ==='object'){
-                const isshow=this.state[key].isshow
-                if (isshow){
-                    this.setState({
-                        zu: true
-                    })
-                    alert('注册功能')
-                }else{
-                    this.setState({
-                        zu:false
-                    })
-                }
-            }
-            // console.log(typeof (this.state[key]) == 'object' )
-
-
-
+    yanbtn=()=>{
+        if (this.state.sends.value.length < 4 &&this.state.sends.value === this.state.sendyan){
+            this.state.sends = { ...this.state.sends, isshow:true }
+            this.setState({
+                sends: this.state.sends
+            })
         }
+    }
+    zuce=()=>{
+       alert('注册成功')
+        console.log(this.props.history.push('/login/den'))
     }
 
     componentDidMount() {
@@ -123,7 +134,7 @@ export default class index extends Component {
 
 
     render() {
-        const { user, imgyan, sends, pwd, yanzheng } = this.state
+        const { user, imgyan, sends, pwd, yanzheng, zu } = this.state
         return (
             <div className='zhuce-con'>
                 <form className='form-box'>
@@ -178,6 +189,7 @@ export default class index extends Component {
                             placeholder='设置密码（6~16位'
                             onChange={this.onBtnInput}
                             onBlur={this.befor}
+                            onClick={this.yanbtn}
                         />
                         <div className='tishi'>
                             <span className={pwd.isshow ? 'show-span' : ''}>密码格式错误</span>
@@ -185,7 +197,8 @@ export default class index extends Component {
                     </div>
                 </form>
                 <div className='zuche-box'>
-                    <div className='tijiao' onClick={this.zuce} >
+                    <div className={zu ? 'tijiao tibg' : 'tijiao'} onClick={zu?this.zuce:''} >
+
                         注册
                     </div>
 

@@ -3,6 +3,7 @@ import { getLogin} from '../api/index'
 import './html.scss'
 import  Tankuang from  '../tankuang'
 import Login from '../login'
+import Home from '../home/index'
 import {Switch,Route} from 'react-router-dom'
 export default class index extends Component {
     componentDidMount(){
@@ -21,9 +22,8 @@ export default class index extends Component {
                 <Switch>
                     <Route path='/' exact component={Tankuang} />
                     <Route path='/login'  component={Login} />
+                    <Route path='/home' component={Home} />
                 </Switch>
-
-                {/* <Tankuang></Tankuang> */}
             </div>
         )
     }

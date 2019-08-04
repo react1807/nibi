@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import './login.scss'
-import {NavLink,Route,Switch} from "react-router-dom"
+import {NavLink,Route,Switch,Redirect} from "react-router-dom"
 import Zuce from './zhuce'
 import Denglu from './denglu'
 export default class index extends Component {
+
     render() {
-        console.log(this.props)
         const { match} = this.props
         return (
             <div className='login-box'>
@@ -20,6 +20,7 @@ export default class index extends Component {
                     <Switch>
                         <Route path={`${match.path}/zu`} component={Zuce} />
                         <Route path={`${match.path}/den`} component={Denglu} />
+                        <Redirect to={`${match.path}/zu`}/>
                     </Switch>
                 </main>
             </div>
