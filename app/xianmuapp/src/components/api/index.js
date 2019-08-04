@@ -11,9 +11,15 @@ axios.interceptors.response.use((res) => {
 })
 
 // 获取登录数据
-export let getName = () => {
-    // 使用 axios
-    return axios.post('/login');
+export let getLogin = (fromData) => {
+
+    // 发送 POST 请求
+    return axios({
+        method: 'get',
+        url: '/login',
+        params: fromData
+    })
+
 }
 // 首页
 export let getIndex = () => {

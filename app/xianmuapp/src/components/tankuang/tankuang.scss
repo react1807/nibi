@@ -1,0 +1,40 @@
+.tan-box{
+    width: 100%;
+    height: 100vh;
+    background: url('http://img.ph.126.net/7tmyrA7rgStMiFPxB1ZgQg==/2038441781438734809.jpg') #333;
+        background-size: 100% 100%;
+    position: relative;
+    overflow: hidden;
+    .tan-imgbox{
+        width: 73%;
+        margin: 50px auto;
+        img{
+            width: 100%;
+        }
+    }
+    .tan-btn{
+        width: 100%;
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+
+        .divbtn{
+            color: #fff;
+            width: 70%;
+             margin: 20px auto;
+             border-radius: 5px;
+             img{
+                 width: 100%;
+             }
+        }
+        .w-bbtn5 {
+           text-align: center;
+            background: rgba(255, 255, 255, .2);
+            border:1px solid #f9f9f9;
+            display: block;
+           font-size: 1.5em;
+           line-height: 88px;
+           margin-bottom: 40px;
+        }
+    }
+}

@@ -1,17 +1,29 @@
 import React, { Component } from 'react'
-import { getName} from '../api/index'
+import { getLogin} from '../api/index'
 import './html.scss'
+import  Tankuang from  '../tankuang'
+import Login from '../login'
+import {Switch,Route} from 'react-router-dom'
 export default class index extends Component {
     componentDidMount(){
-        getName().then(res=>{
+        const fromData={
+            user:'lxp123',
+            password:'123456'
+        }
+        getLogin(fromData).then(res=>{
             console.log(res)
         })
     }
     render() {
         return (
+
             <div className="html-box">
-                我是首页
-                <button>sdksd</button>
+                <Switch>
+                    <Route path='/' exact component={Tankuang} />
+                    <Route path='/login'  component={Login} />
+                </Switch>
+
+                {/* <Tankuang></Tankuang> */}
             </div>
         )
     }
