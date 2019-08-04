@@ -19,7 +19,6 @@ export default class Html extends Component {
                         <Route path='/home/liked' component={() => <Linke></Linke>} />
                         <Redirect to='/home/lofter' />
                     </Switch>
-
                 </main>
             </div>
         )
