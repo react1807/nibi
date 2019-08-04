@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import Header from './header'
 import Images from './img'
+import Publish from '../publishpage'
+import Linke from '../likepages'
 import './home.scss'
-
 import { Route, Switch, Redirect } from 'react-router-dom'
 export default class Html extends Component {
     render() {
@@ -14,11 +15,10 @@ export default class Html extends Component {
                 <main>
                     <Switch>
                         <Route path='/home/lofter' component={() => <Images></Images>} />
-                        <Route path='/home/publish' component={() => <div>艰苦奋斗积分</div>} />
-                        <Route path='/home/liked' component={() => <div>没得空房间贷款</div>} />
+                        <Route path='/home/publish' component={() => <Publish></Publish>} />
+                        <Route path='/home/liked' component={() => <Linke></Linke>} />
                         <Redirect to='/home/lofter' />
                     </Switch>
-
                 </main>
             </div>
         )

@@ -5,36 +5,33 @@
 .bgbox{
     background: #33393E;
     width: 100%;
+    height: 134vw;
     overflow: hidden;
-    height: 124vw;
     header{
         width: 100%;
-        height: 370px;
-      
+        background: red;
       .header-li{
          width: 750px;
-         height:200px;
-         background:#ECECEC; 
-         margin:100px 80px;
-         line-height: 200px;
-         padding-left: 30px;
+        //  height:200px;
+         background:#ECECEC;
+        //  line-height: 200px;
+        //  padding-left: 30px;
         //  border-radius: 25px;
          span{
              padding-left: 70px;
          }
       }
         .header-ul{
-         width: 880px;
-         height: 1000px;
-         background:#F0F0F0;
-         position:absolute;
-         top:300px;
-         left:80px;
+            width: 200px;
+            /* height: 1000px; */
+            background: #F0F0F0;
+            position: absolute;
+            top: 136px;
+            /* left: 80px; */
          .navlinkclick{
             background: #98CCE1;
         }
          li{
-            
              a{
                  display: inline-block;
                  text-decoration: none;
@@ -66,19 +63,19 @@
     }
     .mains{
         width: 96%;
-        height: 100%;
+        height: 130vw;
         background:#F0F0F0;
-        margin:35px;
+        margin:7px;
         overflow: hidden;
         border-radius: 25px;
         .inputbox{
             width: 80%;
-            height: 200px;
+            // height: 200px;
             // background: red;
-            margin:70px auto;
+            margin:20px auto;
             input{
                 width: 100%;
-                height: 200px;
+                // height: 200px;
                 outline: none;
                 font-size: 100px;
             }
@@ -86,7 +83,7 @@
         .tetxarea-box{
             width: 80%;
         //    height: 500px; 
-            margin:120px auto;
+            margin:20px auto;
             textarea{
                 width: 100%;
                 border: 1px solid gray;
@@ -95,18 +92,13 @@
         }
        
         .btn{
-            width: 600px;
-            height: 250px;
+            width: 200px;
+            height: 50px;
             background:#6CBA21;
             color: white;
             text-align: center;
-            line-height: 250px;
-            font-size: 120px;
-            margin-left:150px;
+            line-height: 50px;
             border-radius: 40px;
-        }
-        .imgbox{
-            margin-left: 150px;
         }
     }
 }

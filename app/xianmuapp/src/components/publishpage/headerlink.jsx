@@ -36,8 +36,13 @@ export default class HeaderLink extends Component {
                             <span>▼</span>
                             {
                                 this.props.istwoShow ? <ul className='nav-two-ul'>
-                                    <NavLink to='publishtext'>发布文字</NavLink>
-                                    <NavLink to='publishphoto'>发布图片</NavLink>
+                                    <li>
+                                        <NavLink to='publishtext'>发布文字</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to='publishphoto'>发布图片</NavLink>
+
+                                    </li>
                                 </ul> : ''
                             }
                         </div>
