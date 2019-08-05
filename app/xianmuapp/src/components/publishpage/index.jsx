@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { NavLink, BrowserRouter } from 'react-router-dom'
 import HeaderLink from './headerlink'
 import './index.scss'
 import One from './1.png'
@@ -26,7 +25,7 @@ export default class Html extends Component {
     }
     render() {
         return (
-            <BrowserRouter>
+
                 <div className='bgbox'>
                     <HeaderLink hideshowClick={this.hideshowClick}
                         hideshowClickAgain={this.hideshowClickAgain}
@@ -48,7 +47,6 @@ export default class Html extends Component {
                         </div>
                     </main>
                 </div>
-            </BrowserRouter>
         )
     }
 }

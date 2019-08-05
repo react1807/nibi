@@ -2,41 +2,30 @@
     margin:0;
     padding: 0;
 }
+ul li{
+    list-style: none;
+}
 .bgbox{
     background: #33393E;
     width: 100%;
-    height: 134vw;
+    height: 100vh;
     overflow: hidden;
     header{
         width: 100%;
         background: red;
       .header-li{
-<<<<<<< HEAD
-         width: 750px;
-        //  height:200px;
-         background:#ECECEC;
-        //  line-height: 200px;
-        //  padding-left: 30px;
-        //  border-radius: 25px;
-=======
-        width: 100%;
+        width: 50%;
         height: 50px;
         background: #ECECEC;
-        /* margin: 100px 80px; */
         line-height: 0.5rem;
-        /* padding-left: 30px; */
->>>>>>> 9cc657d4d68f6fed3365e6cc1aa10438b7cc4f9d
+        position: relative;
          span{
              padding-left: 70px;
          }
       }
         .header-ul{
-            width: 200px;
-            /* height: 1000px; */
-            background: #F0F0F0;
-            position: absolute;
-            top: 136px;
-            /* left: 80px; */
+            z-index: 20;
+            background: #ECECEC;
          .navlinkclick{
             background: #98CCE1;
         }
@@ -75,27 +64,23 @@
         border-radius: 25px;
         .inputbox{
             width: 80%;
-            // height: 200px;
-            // background: red;
             margin:20px auto;
             input{
                 width: 100%;
-                // height: 200px;
                 outline: none;
                 font-size: 100px;
             }
         }
         .tetxarea-box{
             width: 80%;
-        //    height: 500px; 
             margin:20px auto;
             textarea{
                 width: 100%;
                 border: 1px solid gray;
-                color:#9AA6AF; 
-            }           
+                color:#9AA6AF;
+            }
         }
-       
+
         .btn{
             width: 200px;
             height: 50px;
