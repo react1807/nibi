@@ -1,5 +1,5 @@
+/* eslint-disable react/no-direct-mutation-state */
 import React, { Component } from 'react'
-import {NavLink} from 'react-router-dom'
 export default class index extends Component {
     constructor(props) {
         super(props)
@@ -131,7 +131,7 @@ export default class index extends Component {
     componentDidMount() {
         this.random()
     }
-
+    asd=()=>{}
 
     render() {
         const { user, imgyan, sends, pwd, yanzheng, zu } = this.state
@@ -197,7 +197,7 @@ export default class index extends Component {
                     </div>
                 </form>
                 <div className='zuche-box'>
-                    <div className={zu ? 'tijiao tibg' : 'tijiao'} onClick={zu?this.zuce:''} >
+                    <div className={zu ? 'tijiao tibg' : 'tijiao'} onClick={zu?this.zuce:this.asd} >
 
                         注册
                     </div>

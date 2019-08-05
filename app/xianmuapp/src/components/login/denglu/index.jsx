@@ -1,3 +1,4 @@
+/* eslint-disable react/no-direct-mutation-state */
 import React, { Component } from 'react'
 
 export default class index extends Component {
@@ -28,7 +29,7 @@ export default class index extends Component {
     }
 
 
-
+    asd = () => { }
     befor = ({ target }) => {
         const { name } = target;
         const value = this.state[name].value
@@ -71,14 +72,14 @@ export default class index extends Component {
             }
         }
         let isyan = [...keys, ...kep]
-        const ss = isyan.every(item => item == false)
+        const ss = isyan.every(item => item === false)
         this.setState({
             zu: ss
         })
     }
     zuce = () => {
         alert('登录成功')
-        console.log(this.props.history.push('/home'))
+       this.props.history.push('/home')
     }
     render() {
         const { user, pwd, zu } = this.state
@@ -112,7 +113,7 @@ export default class index extends Component {
                     </div>
                 </form>
                 <div className='zuche-box'>
-                    <div className={zu ? 'tijiao de tibg' : 'tijiao de'} onClick={zu ? this.zuce : ''}>
+                    <div className={zu ? 'tijiao de tibg' : 'tijiao de'} onClick={zu ? this.zuce : this.asd}>
 
                         登录
                     </div>

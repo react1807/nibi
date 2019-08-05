@@ -7,10 +7,10 @@ import { Switch, Route } from 'react-router-dom'
 
 export default class index extends Component {
     componentDidMount() {
-        const fromData = {
-            user: 'lxp123',
-            password: '123456'
-        }
+        // const fromData = {
+        //     user: 'lxp123',
+        //     password: '123456'
+        // }
     }
     render() {
         return (
