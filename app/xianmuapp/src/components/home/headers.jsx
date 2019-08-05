@@ -11,7 +11,7 @@ export default class Html extends Component {
                 <div className=''>
                     <Header></Header>
                 </div>
-                <main>
+                <main style={{ background: '#31373B' }}>
                     <Switch>
                         <Route path='/home/lofter' component={() => <Images></Images>} />
                         <Route path='/home/liked' component={() => <Linke></Linke>} />
